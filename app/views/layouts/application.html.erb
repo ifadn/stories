@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stories</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Hind:400,300,500,600,700' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div class="menu">
+	<div class="icon-close">
+		Close
+	</div>
+
+	<ul>
+		<li><%= link_to "Home", root_path %></li>
+		<li><%= link_to 'About', about_path %></li>
+		<li><%= link_to 'Contact', new_signup_path %></li>
+	</ul>
+</div>
+
+<%= yield %>
+
+	<div class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<p>A Shutterbug Company</p>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+</body>
+</html>
